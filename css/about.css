@@ -1,0 +1,144 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('../images/bg1.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: left;
+    direction: ltr; /* Default direction */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 0;
+    box-shadow: 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Header container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+/* Logo and Navigation Links Group */
+.logo-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between logo and navigation links */
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    display: block;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: black;
+    border-radius: 4px;
+    color: #dd78ff;
+    padding: 4px 8px;
+}
+
+/* Language Switch */
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 15px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007bff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+/* RTL Support */
+[dir="rtl"] .header-container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .logo-nav {
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .language-switch {
+    justify-content: flex-start;
+    margin-right: auto;
+}

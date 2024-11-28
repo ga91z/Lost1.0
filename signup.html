@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+<header>
+  <div class="header-container">
+    <!-- Logo and Navigation Links -->
+    <div class="logo-nav">
+      <div class="logo">
+        <a href="index.html"><img src="./images/logo.png" alt="Site Logo"></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="login.html" class="nav-login">Login</a></li>
+          <li><a href="contact.html" class="nav-contact">Contact</a></li>
+          <li><a href="about.html" class="nav-about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+  <div class="login-container">
+    <h2 class="signup_text">Sign Up</h2>
+    <form id="signup-form">
+      <div class="form-group">
+        <label for="new-username" class="username">Username</label>
+        <input type="text" id="new-username" name="new-username" required>
+        <div class="error-message" id="new-username-error"></div>
+      </div>
+      <div class="form-group">
+        <label for="new-password" class="password">Password</label>
+        <input type="password" id="new-password" name="new-password" required >
+        <div class="error-message" id="new-password-error"></div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password" class="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required >
+        <div class="error-message" id="confirm-password-error"></div>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <p class="login_text">Already have an account?</p>
+    <p><a href="login.html" class="login_link">Log In</a></p>
+  </div>
+  <script src="./js/login.js"></script>
+  <script src="./js/ls-signup.js"></script>
+</body>
+</html>
